@@ -1,0 +1,17 @@
+﻿body {
+    font-family:Arial;
+    margin-top:100px;
+}
+
+.btn{
+    width:75px;
+}
+.imageThumnails{
+    width:auto;
+    height:200px;
+}
+
+.myH4Style {
+    font-family: Verdana;
+    font-size: 20px;
+}

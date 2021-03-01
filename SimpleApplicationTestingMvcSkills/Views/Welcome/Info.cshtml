@@ -1,0 +1,46 @@
+﻿@model WelcomeInfoViewModel
+
+@{
+    ViewBag.Title = "Employee Information";
+    var photoPath = "~/images/" + (Model.Employee.PhotoPath ?? "Iam_tuseTheProgrammer_1.jpg");
+}
+
+
+<div class="row justify-content-center mt-2">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h3>@Model.Employee.Name</h3>
+            </div>
+            <div class="card-body text-center">
+                <img src="@photoPath" class="card-img-top imageThumnails" asp-append-version="true"/>
+                <h4>
+                    Email : @Model.Employee.Email
+                </h4>
+                <h4>
+                    Department : @Model.Employee.Department
+                </h4>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-action="programming" asp-controller="welcome" class="btn btn-primary mt-2">Back</a>
+                <a asp-action="edit" asp-controller="welcome" asp-route-id="@Model.Employee.ID" class="btn btn-primary mt-2">Edit</a>
+                <a asp-action="" asp-controller="home" class="btn btn-danger mt-2">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+@section Scripts{
+    <script src="~/js/site.js"></script>
+}

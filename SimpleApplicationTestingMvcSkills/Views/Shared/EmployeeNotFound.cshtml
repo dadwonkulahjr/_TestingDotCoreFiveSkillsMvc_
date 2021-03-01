@@ -1,0 +1,15 @@
+﻿@model int
+
+<div class="alert alert-danger">
+    <h4>
+        Error 404:
+    </h4>
+    <hr />
+    <h5>
+        The employee with the specified Id = @Model cannot be found at this moment.
+    </h5>
+</div>
+<a asp-controller="welcome" asp-action="programming" class="btn btn-outline-primary btn-block" style="width:auto;">
+    Click the link to view the list of employees
+</a>
+
